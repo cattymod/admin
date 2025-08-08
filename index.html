@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CattyAdmin Panel — Admin Tools for Scratch Projects</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #121921;
+      color: #cbd5e1;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #1e293b;
+      padding: 1.5rem 3rem;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #3b82f6;
+      letter-spacing: 1.2px;
+    }
+    nav a {
+      margin-left: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #94a3b8;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #3b82f6;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+      text-align: center;
+    }
+
+    .hero {
+      margin-bottom: 4rem;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #60a5fa;
+      margin-bottom: 1rem;
+      letter-spacing: 1.1px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      color: #94a3b8;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #2563eb, #3b82f6);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 1rem 3rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgb(59 130 246 / 0.6);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      text-transform: none; /* Normal case text */
+      letter-spacing: 0.5px;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      box-shadow: 0 8px 25px rgb(59 130 246 / 0.9);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 4rem;
+      text-align: left;
+    }
+    .feature-card {
+      background: #1e293b;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgb(0 0 0 / 0.5);
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 30px rgb(59 130 246 / 0.8);
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #3b82f6;
+      margin-bottom: 1rem;
+    }
+    .feature-card p {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+
+    /* Warning note */
+    .warning-note {
+      max-width: 600px;
+      margin: 2rem auto 2.5rem;
+      padding: 1rem 1.5rem;
+      background-color: #1f2937;
+      border-left: 5px solid #ef4444;
+      color: #f87171;
+      font-weight: 600;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 1rem;
+      user-select: none;
+    }
+
+    footer {
+      background: #1e293b;
+      color: #64748b;
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1rem 2rem;
+      margin-top: auto;
+      user-select: none;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 3rem 1.5rem 4rem;
+      }
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      .btn-primary {
+        font-size: 1.1rem;
+        padding: 0.85rem 2rem;
+      }
+      .feature-card {
+        padding: 1.5rem;
+      }
+      .warning-note {
+        font-size: 0.95rem;
+        margin: 1.5rem auto 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CattyAdmin Panel</h1>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#download">Download</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-label="Hero section">
+    <h2>Take Full Control of Your Scratch Projects</h2>
+    <p>CattyAdmin Panel gives Scratch creators a lightweight, local tool to send shutdown commands, alerts, and undo changes — all through Scratch cloud variables, no server needed.</p>
+
+    <section class="warning-note" aria-label="Important notice">
+      ⚠️ <strong>Important:</strong> CattyAdmin does <em>NOT</em> work for New Scratchers. It will <u>not</u> be able to send and receive requests.
+    </section>
+
+    <button class="btn-primary" onclick="window.location.href='https://cattymod.github.io/admin/download/'" id="download">
+      Download now
+    </button>
+  </section>
+
+  <section id="features" aria-label="Features">
+    <div class="features">
+      <article class="feature-card">
+        <h3>Instant shutdown</h3>
+        <p>Disable your project remotely with a single command to keep control over your Scratch creations at all times.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Shutdown notice alerts</h3>
+        <p>Send clear alerts to users before shutdowns, so they’re always informed and never caught off guard.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Remove changes</h3>
+        <p>Easily undo unwanted changes or reset your project state by managing cloud variables with ease.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Zero server setup</h3>
+        <p>Works entirely through Scratch cloud variables — no external server or backend hosting required.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Open source & free</h3>
+        <p>CattyAdmin Panel is fully open source and free, built by Scratchers for Scratchers.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Easy to use</h3>
+        <p>Simple installation and intuitive interface let you focus on what matters — managing your projects effectively.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-label="Call to action" style="text-align:center;" id="download">
+    <section class="warning-note" aria-label="Important notice">
+      ⚠️ <strong>Important:</strong> CattyAdmin does <em>NOT</em> work for New Scratchers. It will <u>not</u> be able to send and receive requests.
+    </section>
+
+    <button class="btn-primary" onclick="window.location.href='https://cattymod.github.io/admin/download/'">
+      Download CattyAdmin Panel
+    </button>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 CattyAdmin. Made with 🐾 by Noahscratch493
+</footer>
+
+</body>
+</html>
