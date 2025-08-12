@@ -30,10 +30,13 @@ It will **not** be able to send or receive requests unless your Scratch account 
 3. **Add Admins**: The sprite comes with a built-in script that controls who can use admin commands.  
    Example script format:
 
-   ```scratch
-   Add (Noahscratch493) to [Admins v]
-   Add (username2) to [Admins v]
-   Add (username3) to [Admins v]
+---
+   
+   ##### Add (Noahscratch493) to [Admins v]
+   ##### Add (username2) to [Admins v]
+   ##### Add (username3) to [Admins v]
+
+---
 Replace `(username)` with the exact Scratch username you want to grant admin access.
 
 ---
