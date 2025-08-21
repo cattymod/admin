@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CattyAdmin Panel 🐾</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f8fbff;
+    margin: 0;
+    color: #333;
+  }
+  header {
+    background: #ff9800;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  h1 .mod { color: #00bfff; }
+  nav {
+    margin-top: 10px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+  nav a:hover { text-decoration: underline; }
+  section {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .feature-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  .feature-card h3 {
+    color: #ff9800;
+  }
+  .download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #ff9800;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .download-btn:hover { background: #e68a00; }
+  footer {
+    background: #f1f6fa;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    border-top: 1px solid #d7e4ef;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>🐾 CattyAdmin Panel</h1>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="#credits">Credits</a>
+    </nav>
+  </header>
+
+  <section id="features">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>🛠️ Remote Shutdown</h3>
+        <p>Disable your Scratch project remotely using cloud variables — no server needed.</p>
+      </div>
+      <div class="feature-card">
+        <h3>⚠️ Alerts & Notices</h3>
+        <p>Send shutdown warnings or notifications to your project users before executing commands.</p>
+      </div>
+      <div class="feature-card">
+        <h3>♻️ Remove Changes</h3>
+        <p>Undo edits or reset variables quickly to keep your Scratch project in control.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" style="text-align: center;">
+    <h2>Download</h2>
+    <p>Get the CattyAdmin Panel sprite to use in your Scratch projects:</p>
+    <a href="https://github.com/cattymod/admin/raw/refs/heads/main/Admin.sprite3" class="download-btn">📥 Download Now</a>
+  </section>
+
+  <section id="credits">
+    <h2>Credits</h2>
+    <p>Developed by the <strong>CattyMod Team</strong> 🐾</p>
+    <p>Source code available on <a href="https://github.com/cattymod/admin/">GitHub</a>.</p>
+  </section>
+
+  <footer>
+By The CattyMod Team under the MIT license.
+  </footer>
+</body>
+</html>
